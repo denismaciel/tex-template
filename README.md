@@ -1,5 +1,7 @@
 # Denis' Latex Template
 
+To compile your document, run `make compile-pdf` from the root of your project.
+
 ## File Structure
 
 `compilation/main.tex` is the file that is actually compiled. It contains most of the settings and styles and invokes `content/body.tex` to get its content.
@@ -10,11 +12,11 @@ In `content/fix/frontmatter.tex`, you can control all the stuff that usually com
 
 I assume you have your bibliography living in your home directory (`~/references.bib`). Every time you run `make compile-pdf`, the current version of the bib file living in your home directory is copied to the project folder. This assures the PDF is compiled with the latest version of your references.
 
-## Technical Notes
+## Gotchas
 
 * In LaTeX, the paths must be relative to the folder where the main document is located, not to the folder where the file which specifies the path is.
 
-``` bash
+```
 main_file/
     main_file.tex
 content/
